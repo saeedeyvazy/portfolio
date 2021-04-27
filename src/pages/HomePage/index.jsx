@@ -15,11 +15,16 @@ const BackFilter = styled.div`
     width:100%;
     height:100%;
     background-color:rgb(16, 12, 12,.8);
+    display:flex;
+    flex-direction:column;
+    align-items:space-around;
 `
 
 const HeaderContainer = styled.div`
     display:flex;
     justify-content:space-between;
+    height:50px;
+    
 `
 const Logo = styled.div`
     flex:1;
@@ -44,6 +49,19 @@ const Menu = styled.div`
     }
 `
 
+const SummarizaInfo = styled.div`
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    
+    align-items:flex-start;
+    justify-content:center;
+    h1{
+        color:#fff;
+        font-size: 64px;
+    }
+`
+
 function HomePage() {
     return (
         <>
@@ -60,6 +78,9 @@ function HomePage() {
                             <h4>Contract</h4>
                         </Menu>
                     </HeaderContainer>
+                    <SummarizaInfo>
+                        <h1>Saeed<br/>Eyvazy</h1>
+                    </SummarizaInfo>
                 </BackFilter>
             </TopSectionContainer>   
         </>
