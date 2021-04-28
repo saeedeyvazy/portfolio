@@ -1,4 +1,4 @@
-import BG from './images'
+import {image} from './images'
 
-const IMAGE = {BG}
-export {IMAGE}
+export const IMAGE = image
+

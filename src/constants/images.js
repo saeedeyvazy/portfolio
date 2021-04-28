@@ -1,3 +1,5 @@
 import BG from '../assets/images/bg10.jpg'
+import PROFILE from '../assets/images/profile.jpg'
 
-export default BG
+export const image = {BG,PROFILE} 
+

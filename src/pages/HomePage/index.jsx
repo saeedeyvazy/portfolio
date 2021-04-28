@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { IMAGE } from '../../constants'
 import {Marginer} from '../../components/Marginer'
 import ReactTypingEffect from 'react-typing-effect';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 const TopSectionContainer = styled.div`
     height:100vh;
     width:100%;
@@ -88,9 +89,77 @@ const Button = styled.button`
     }
 `
 
+const Container = styled.div`
+    display: flex;
+    flex-direction:column;
+
+`
+const IntroducePerson = styled.div`
+    display: flex;
+    height:100vh;
+    flex:1;
+    padding:10px 20px;
+`
+
+const ProfilePhoto = styled.div`
+    flex:1;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+
+    img{
+        object-fit:contain;
+        width:270px;
+        height:270px;
+        border-radius:50%
+    }
+`
+const SocialMediaContainer = styled.div`
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px 0;
+    width:fit-content;;
+    svg{
+        color:#795548;
+        font-size:2rem;
+        padding : 0 10px;
+        cursor: pointer;
+        transition:all 200ms ease-in-out;
+        &:hover{
+            transform:scale(1.2)
+        }
+    }
+   
+`
+
+const ProfileDesc = styled.div`
+    flex:2;
+    text-align:start;
+    display: flex;
+    flex-direction:column;
+    justify-content:align-start;
+    height:100%;
+    color:#252525;
+    h1{
+        font-weight:700;
+        font-size:26px
+    }
+    p{
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 27px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    h6{
+        font-size:16px;
+    }
+`
+
 function HomePage() {
     return (
-        <>
+        <Container>
            <TopSectionContainer>
                 <BackFilter>
                     <HeaderContainer>
@@ -121,7 +190,29 @@ function HomePage() {
                     
                 </BackFilter>
             </TopSectionContainer>   
-        </>
+            <IntroducePerson>
+                    <ProfilePhoto>
+                        <img alt='profile' src={IMAGE.PROFILE} />
+                        <SocialMediaContainer>
+                            <FontAwesomeIcon icon={faLinkedin}/>
+                            <FontAwesomeIcon icon={faGithub}/>
+                            <FontAwesomeIcon icon={faInstagram}/>
+                            <FontAwesomeIcon icon={faTwitter}/>
+                        </SocialMediaContainer>
+                    </ProfilePhoto>
+                    <ProfileDesc>
+                        <h1>Hello! I'm Saeed Eyvazy,<br />
+                        A Full Stack Developer<br />
+                        From Tehran, Iran.
+                        </h1>
+                        
+                         <p>After graduating with a bachelor’s in biology, I found myself in a stable career as a microbiologist for a major brewery. While the idea of working at a brewery was definitely a great conversation starter, I realized that although I still had a love for science, the industry I was in was lacking in creativity and problem solving. After dabbling with some introductory JavaScript courses on the internet and exploring programming through self-teaching, I decided to take a leap of faith and made a switch in careers into tech.</p>
+                         <p>Through LearningFuze, I have developed a strong understanding of JavaScript (ES5 & ES6), React, Node.js, Express, PostgreSQL, HTML5, and CSS3. As a developer, I find a lot of joy and excitement utilizing my skills to help troubleshoot bugs and pushing projects forward. I enjoy learning new technologies and growing in a field that is constantly being pushed to new boundaries.</p>
+                         <p>Feel free to connect with me! Let's talk about web dev, tech, sports, photography, video games, cooking, or how I can be of help to your team or business! I'd love to get to know more developers and expand my network. I also know a thing or two about beer.</p>
+                        
+                    </ProfileDesc>
+            </IntroducePerson>
+        </Container>
     )
 }
 
