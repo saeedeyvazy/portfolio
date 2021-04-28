@@ -11,7 +11,7 @@ const Container = styled.div`
     width:33.333%;
     svg{
         color:#06BC9B;
-        font-size:3rem;
+        font-size:4rem;
     }
     h3{
         margin-top: 0;

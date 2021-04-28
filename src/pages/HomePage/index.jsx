@@ -4,9 +4,9 @@ import { IMAGE,COLOR } from '../../constants'
 import {Marginer} from '../../components/Marginer'
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3, faGithub, faInstagram, faJava, faJs, faLinkedin, faReact, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faDocker, faGitAlt, faGithub, faInstagram, faJava, faJs, faLinkedin, faNpm, faReact, faSlack, faSlackHash, faTrello, faTwitter, faUbuntu } from '@fortawesome/free-brands-svg-icons'
 import SkillCard from '../../components/SkillCard'
-import {faDatabase}from '@fortawesome/free-solid-svg-icons'
+import {faDatabase, faTerminal}from '@fortawesome/free-solid-svg-icons'
 const TopSectionContainer = styled.div`
     height:100vh;
     width:100%;
@@ -190,7 +190,7 @@ const SkillsContainer = styled.div`
     align-items:center;
     justify-content:center;
     width:100%;
-    background-color:#f5f6f7;
+    background-color:${({bgColor}) => bgColor ? bgColor : '#f5f6f7'};
     h3{
         flex:1;
         font-size: 2.25rem;
@@ -293,6 +293,24 @@ function HomePage() {
                     <SkillCard title='Databases' icon={faDatabase} description='Oracle, MongoDB'/>
                     <SkillCard title='Javascript' icon={faJs} description='JavaScript (ES6/ES7)'/>
                     <SkillCard title='CSS3' icon={faCss3} description=''/>
+                </CardContainer>
+            </SkillsContainer>
+            <SkillsContainer bgColor='white'>
+                <h3>Tools</h3>
+                <p>
+                    My weapons of choice to help tackle any project.
+                </p>
+                <Marginer direction="vertical" margin={50} />
+                <CardContainer>
+                    <SkillCard title='Git' icon={faGitAlt} />
+                    <SkillCard title='GitHub' icon={faGithub}/>
+                    <SkillCard title='npm' icon={faNpm}/>
+                    <SkillCard title='Trello' icon={faTrello}/>
+                    <SkillCard title='Slack' icon={faSlackHash} />
+                    <SkillCard title='Docker' icon={faDocker} />
+                    <SkillCard title='Terminal' icon={faTerminal} />
+                    <SkillCard title='Ubuntu' icon={faUbuntu} />
+                    
                 </CardContainer>
             </SkillsContainer>
         </Container>
