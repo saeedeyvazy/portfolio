@@ -7,6 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBootstrap, faCss3, faDocker, faGitAlt, faGithub, faHtml5, faInstagram, faJava, faJs, faLinkedin, faNpm, faReact, faSlack, faSlackHash, faTrello, faTwitter, faUbuntu } from '@fortawesome/free-brands-svg-icons'
 import SkillCard from '../../components/SkillCard'
 import {faDatabase, faTerminal}from '@fortawesome/free-solid-svg-icons'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+import Aos from 'aos'
+
 const TopSectionContainer = styled.div`
     height:100vh;
     width:100%;
@@ -212,6 +216,14 @@ const CardContainer = styled.div`
 `
 
 function HomePage() {
+
+    useEffect(() => {
+        Aos.init({
+            duration:2000
+        })
+        
+    }, [])
+
     return (
         <Container>
            <TopSectionContainer>
@@ -287,7 +299,7 @@ function HomePage() {
                     projects
                 </p>
                 <Marginer direction="vertical" margin={50} />
-                <CardContainer>
+                <CardContainer data-aos='fade-in'>
                     <SkillCard title='Java' icon={faJava} description='Spring (Boot & MVC), JUnit, Maven'/>
                     <SkillCard title='React' icon={faReact} description='ReactJs & React Native'/>
                     <SkillCard title='Databases' icon={faDatabase} description='Oracle, MongoDB'/>
@@ -303,7 +315,7 @@ function HomePage() {
                     My weapons of choice to help tackle any project.
                 </p>
                 <Marginer direction="vertical" margin={50} />
-                <CardContainer>
+                <CardContainer data-aos='fade-in'>
                     <SkillCard title='Git' icon={faGitAlt} />
                     <SkillCard title='GitHub' icon={faGithub}/>
                     <SkillCard title='npm' icon={faNpm}/>
