@@ -115,6 +115,13 @@ const ProfilePhoto = styled.div`
         height:270px;
         border-radius:50%
     }
+    a{
+        color:rgba(0,0,0,.54);
+        text-decoration:none;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
 `
 const SocialMediaContainer = styled.div`
     display: flex;
@@ -159,6 +166,7 @@ const ProfileDesc = styled.div`
         font-size:16px;
         color:#444444;
         font-weight:600;
+        margin-bottom:10px;
     }
     a{
         text-decoration:none;
@@ -199,15 +207,21 @@ function HomePage() {
                                 speed={50} 
                                 text={["React Js Developer", "Spring Boot Developer", "Software Engineer", "Coder", "Bug Squasher"]} />
                         </SkillsContainer>
-                        <Marginer direction="vertical" margin={20}/>
+                        <Marginer direction="vertical" margin={50}/>
                         <Button>Resume</Button>
                     </SummarizaInfo>
                     
                 </BackFilter>
             </TopSectionContainer>   
+            <Marginer direction="vertical" margin={20} />
             <IntroducePerson>
                     <ProfilePhoto>
                         <img alt='profile' src={IMAGE.PROFILE} />
+                        <h3>
+                            <a href="https://utdallas.edu"  rel="noopener">
+                                <span>The Kharazmi University Of Tehran, Iran</span>
+                            </a>
+                        </h3>
                         <SocialMediaContainer>
                             <FontAwesomeIcon icon={faLinkedin}/>
                             <FontAwesomeIcon icon={faGithub}/>
