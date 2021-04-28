@@ -195,6 +195,13 @@ const SkillsContainer = styled.div`
         flex:1;
         font-size: 2.25rem;
         font-weight:400;
+        margin-bottom:0
+    }
+    > p{
+       line-height:10px;
+       margin-top:5px;
+       font-size:14px;
+       font-weight:normal;
     }
 `
 const CardContainer = styled.div`
@@ -275,6 +282,11 @@ function HomePage() {
             </IntroducePerson>
             <SkillsContainer>
                 <h3>Skills</h3>
+                <p>
+                    Languages and Technologies that I have learned and applied to my
+                    projects
+                </p>
+                <Marginer direction="vertical" margin={50} />
                 <CardContainer>
                     <SkillCard title='Java' icon={faJava} description='Spring (Boot & MVC), JUnit, Maven'/>
                     <SkillCard title='React' icon={faReact} description='ReactJs & React Native'/>
