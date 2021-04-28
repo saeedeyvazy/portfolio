@@ -4,7 +4,9 @@ import { IMAGE } from '../../constants'
 import {Marginer} from '../../components/Marginer'
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faGoogle, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faGit, faGithub, faInstagram, faJava, faJs, faLinkedin, faReact, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import SkillCard from '../../components/SkillCard'
+import {faDatabase}from '@fortawesome/free-solid-svg-icons'
 const TopSectionContainer = styled.div`
     height:100vh;
     width:100%;
@@ -67,7 +69,7 @@ const SummarizaInfo = styled.div`
     }
 `
 
-const SkillsContainer = styled.div`
+const SummSkillsContainer = styled.div`
     font-size:12px;
     color:#fff;
     font-weight:500;
@@ -101,6 +103,7 @@ const IntroducePerson = styled.div`
     height:100vh;
     flex:1;
     padding:10px 20px;
+    flex-wrap:wrap;
 `
 
 const ProfilePhoto = styled.div`
@@ -180,6 +183,27 @@ const ProfileDesc = styled.div`
     }
 `
 
+const SkillsContainer = styled.div`
+    height:100vh;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    background-color:#f5f6f7;
+    h3{
+        flex:1;
+        font-size: 2.25rem;
+        font-weight:400;
+    }
+`
+const CardContainer = styled.div`
+    flex:6;
+    display: flex;
+    width:100%;
+    flex-wrap:wrap;
+`
+
 function HomePage() {
     return (
         <Container>
@@ -199,14 +223,14 @@ function HomePage() {
                     <SummarizaInfo>
                         <Marginer direction="horizontal" margin={20}/>
                         <h1>Saeed<br/>Eyvazy</h1>
-                        <SkillsContainer>
+                        <SummSkillsContainer>
                              <ReactTypingEffect 
                                 typingDelay={300}    
                                 eraseSpeed={20} 
                                 eraseDelay={400} 
                                 speed={50} 
                                 text={["React Js Developer", "Spring Boot Developer", "Software Engineer", "Coder", "Bug Squasher"]} />
-                        </SkillsContainer>
+                        </SummSkillsContainer>
                         <Marginer direction="vertical" margin={50}/>
                         <Button>Resume</Button>
                     </SummarizaInfo>
@@ -249,6 +273,16 @@ function HomePage() {
                          <Button>Resume</Button>
                     </ProfileDesc>
             </IntroducePerson>
+            <SkillsContainer>
+                <h3>Skills</h3>
+                <CardContainer>
+                    <SkillCard title='Java' icon={faJava} description='Spring (Boot & MVC), JUnit, Maven'/>
+                    <SkillCard title='React' icon={faReact} description='ReactJs & React Native'/>
+                    <SkillCard title='Databases' icon={faDatabase} description='Oracle, MongoDB'/>
+                    <SkillCard title='Javascript' icon={faJs} description='JavaScript (ES6/ES7)'/>
+                    <SkillCard title='CSS3' icon={faCss3} description=''/>
+                </CardContainer>
+            </SkillsContainer>
         </Container>
     )
 }

@@ -6,10 +6,12 @@ const Container = styled.div`
     display: flex;
     flex-direction:column;
     justify-content:center;
-    height:auto;
+    align-items:center;
+    height:fit-content;
     width:33.333%;
     svg{
-        color:#795548
+        color:#06BC9B;
+        font-size:3rem;
     }
     h3{
         margin-top: 0;
@@ -22,7 +24,7 @@ const Container = styled.div`
 function SkillCard({icon, title, description}) {
     return (
         <Container>
-             <FontAwesomeIcon icon={icon} size='lg'/>   
+             <FontAwesomeIcon icon={icon} />   
              <h3>{title}</h3>
              <p>{description}</p>
         </Container>
