@@ -4,7 +4,7 @@ import { IMAGE,COLOR } from '../../constants'
 import {Marginer} from '../../components/Marginer'
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3, faDocker, faGitAlt, faGithub, faInstagram, faJava, faJs, faLinkedin, faNpm, faReact, faSlack, faSlackHash, faTrello, faTwitter, faUbuntu } from '@fortawesome/free-brands-svg-icons'
+import { faBootstrap, faCss3, faDocker, faGitAlt, faGithub, faHtml5, faInstagram, faJava, faJs, faLinkedin, faNpm, faReact, faSlack, faSlackHash, faTrello, faTwitter, faUbuntu } from '@fortawesome/free-brands-svg-icons'
 import SkillCard from '../../components/SkillCard'
 import {faDatabase, faTerminal}from '@fortawesome/free-solid-svg-icons'
 const TopSectionContainer = styled.div`
@@ -293,6 +293,8 @@ function HomePage() {
                     <SkillCard title='Databases' icon={faDatabase} description='Oracle, MongoDB'/>
                     <SkillCard title='Javascript' icon={faJs} description='JavaScript (ES6/ES7)'/>
                     <SkillCard title='CSS3' icon={faCss3} description=''/>
+                    <SkillCard title='HTML5' icon={faHtml5} description=''/>
+                    <SkillCard title='Bootstrap4' icon={faBootstrap} description=''/>
                 </CardContainer>
             </SkillsContainer>
             <SkillsContainer bgColor='white'>

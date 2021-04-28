@@ -8,7 +8,7 @@ const Container = styled.div`
     justify-content:center;
     align-items:center;
     height:fit-content;
-    width:33.333%;
+    width:25%;
     svg{
         color:#06BC9B;
         font-size:4rem;
