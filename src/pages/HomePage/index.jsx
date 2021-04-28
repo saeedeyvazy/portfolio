@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { IMAGE } from '../../constants'
+import {Marginer} from '../../components/Marginer'
+import ReactTypingEffect from 'react-typing-effect';
 
 const TopSectionContainer = styled.div`
     height:100vh;
@@ -53,12 +55,36 @@ const SummarizaInfo = styled.div`
     flex:1;
     display:flex;
     flex-direction:column;
-    
+    padding:0 20px;
     align-items:flex-start;
     justify-content:center;
+    text-align: start;
     h1{
         color:#fff;
         font-size: 64px;
+        text-transform:uppercase;
+    }
+`
+
+const SkillsContainer = styled.div`
+    font-size:12px;
+    color:#fff;
+    font-weight:500;
+    letter-spacing:3px;
+`
+
+const Button = styled.button`
+    background-color:#000;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    cursor: pointer;
+    border-radius:3px;
+    font-weight:500;
+    transition:all 200ms ease-in-out;
+    text-transform:uppercase;
+    &:hover{
+       background-color:#f90505;;     
     }
 `
 
@@ -79,8 +105,20 @@ function HomePage() {
                         </Menu>
                     </HeaderContainer>
                     <SummarizaInfo>
+                        <Marginer direction="horizontal" margin={20}/>
                         <h1>Saeed<br/>Eyvazy</h1>
+                        <SkillsContainer>
+                             <ReactTypingEffect 
+                                typingDelay={300}    
+                                eraseSpeed={20} 
+                                eraseDelay={400} 
+                                speed={50} 
+                                text={["React Js Developer", "Spring Boot Developer", "Software Engineer", "Coder", "Bug Squasher"]} />
+                        </SkillsContainer>
+                        <Marginer direction="vertical" margin={20}/>
+                        <Button>Resume</Button>
                     </SummarizaInfo>
+                    
                 </BackFilter>
             </TopSectionContainer>   
         </>
