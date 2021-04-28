@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IMAGE } from '../../constants'
+import { IMAGE,COLOR } from '../../constants'
 import {Marginer} from '../../components/Marginer'
 import ReactTypingEffect from 'react-typing-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCss3, faGit, faGithub, faInstagram, faJava, faJs, faLinkedin, faReact, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faCss3, faGithub, faInstagram, faJava, faJs, faLinkedin, faReact, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import SkillCard from '../../components/SkillCard'
 import {faDatabase}from '@fortawesome/free-solid-svg-icons'
 const TopSectionContainer = styled.div`
@@ -89,7 +89,7 @@ const Button = styled.button`
     width:150px;
     text-align:center;
     &:hover{
-       background-color:#f90505;;     
+       background-color:${COLOR.PRIMARY_COLOR};     
     }
 `
 
