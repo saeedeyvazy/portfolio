@@ -17,7 +17,6 @@ import {
   faLinkedin,
   faNpm,
   faReact,
-  faSlack,
   faSlackHash,
   faTrello,
   faTwitter,
@@ -29,6 +28,7 @@ import "aos/dist/aos.css"
 import { useEffect } from "react"
 import Aos from "aos"
 import DescriptionSection from "../../components/DescriptionSection"
+import { deviceSize } from "../../constants/device.size"
 
 const TopSectionContainer = styled.div`
   height: 100vh;
@@ -52,6 +52,9 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   height: 50px;
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    display: none;
+  }
 `
 const Logo = styled.div`
   flex: 1;
@@ -59,7 +62,7 @@ const Logo = styled.div`
 `
 const Menu = styled.div`
   display: flex;
-  flex: 1;
+  flex: 10;
   justify-content: flex-end;
 
   padding: 0 20px;
@@ -124,7 +127,11 @@ const IntroducePerson = styled.div`
   height: 100vh;
   flex: 1;
   padding: 10px 20px;
-  flex-wrap: wrap;
+  @media screen and (max-width: ${deviceSize.tablet}px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+  }
 `
 
 const ProfilePhoto = styled.div`
@@ -132,7 +139,10 @@ const ProfilePhoto = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  height: fit-content;
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    height: auto;
+  }
   img {
     object-fit: contain;
     width: 270px;
@@ -173,6 +183,11 @@ const ProfileDesc = styled.div`
   justify-content: align-start;
   height: 100%;
   color: #252525;
+  @media screen and (max-width: ${deviceSize.tablet}px) {
+    text-align: center;
+    justify-content: center;
+    height: auto;
+  }
   h1 {
     font-weight: 700;
     font-size: 26px;
