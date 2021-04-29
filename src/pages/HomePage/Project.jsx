@@ -1,15 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 import DescriptionSection from "../../components/DescriptionSection"
+import ProjectCard from "../../components/ProjectCard"
+import { IMAGE } from "../../constants"
 import { deviceSize } from "../../constants/device.size"
 
-const ProjectContainer = styled.div`
+const Container = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  min-height: 100vh;
   background-color: ${({ bgColor }) => (bgColor ? bgColor : "#f5f6f7")};
   > h3 {
     font-size: 2.25rem;
@@ -34,7 +37,7 @@ const TabContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: fit-content;
-  flex: 1;
+  flex: 0.1;
 `
 
 const Tab = styled.div`
@@ -60,10 +63,19 @@ const TabText = styled.h6`
   font-size: 13px;
   text-transform: uppercase;
 `
+const ProjectContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: space-around;
+  flex: 1;
+  /* padding: 0 20px; */
+`
 
 function Project() {
   return (
-    <ProjectContainer>
+    <Container>
       <h3>Projects</h3>
       <p>
         From ideation to creation, here are some applications that I have
@@ -83,7 +95,13 @@ function Project() {
           <TabText>Rest Api</TabText>
         </Tab>
       </TabContainer>
-    </ProjectContainer>
+      <ProjectContainer>
+        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
+        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
+        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
+        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
+      </ProjectContainer>
+    </Container>
   )
 }
 
