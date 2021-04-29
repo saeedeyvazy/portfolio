@@ -29,6 +29,7 @@ import { useEffect } from "react"
 import Aos from "aos"
 import DescriptionSection from "../../components/DescriptionSection"
 import { deviceSize } from "../../constants/device.size"
+import Project from "./Project"
 
 const TopSectionContainer = styled.div`
   height: 100vh;
@@ -376,6 +377,7 @@ function HomePage() {
         <SkillCard title='Terminal' icon={faTerminal} />
         <SkillCard title='Ubuntu' icon={faUbuntu} />
       </DescriptionSection>
+      <Project />
     </Container>
   )
 }
