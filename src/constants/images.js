@@ -1,5 +1,5 @@
 import BG from "../assets/images/bg10.jpg"
-import PROFILE from "../assets/images/profile.jpg"
+import PROFILE from "../assets/images/photo.jpg"
 
 const PROJECTS = {
   servycing:
