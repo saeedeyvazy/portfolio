@@ -63,14 +63,25 @@ const TabText = styled.h6`
   font-size: 13px;
   text-transform: uppercase;
 `
+const CardContainer = styled.div`
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: space-around;
+  flex-wrap: wrap;
+`
+
 const ProjectContainer = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: space-around;
+`
+
+const ProjectTitle = styled.div`
   flex: 1;
-  /* padding: 0 20px; */
+  height: auto;
 `
 
 function Project() {
@@ -96,10 +107,39 @@ function Project() {
         </Tab>
       </TabContainer>
       <ProjectContainer>
-        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
-        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
-        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
-        <ProjectCard src={IMAGE.PROJECTS.servycing}></ProjectCard>
+        <ProjectTitle>
+          <h1>work.selected()</h1>
+        </ProjectTitle>
+        <CardContainer data-aos='fade-in'>
+          <ProjectCard
+            src={IMAGE.PROJECTS.servycing}
+            title='Confiança Delivery'
+            year='2018'
+            description='Supermarket online delivery store'
+            company='BizCommerce'
+          />
+          <ProjectCard
+            src={IMAGE.PROJECTS.disney}
+            title='Disney'
+            year='2017'
+            description='online Movies store'
+            company='Online Movies'
+          />
+          <ProjectCard
+            src={IMAGE.PROJECTS.food}
+            title='Food Delivery'
+            year='2019'
+            description='Food Delivey App'
+            company='Online Food'
+          />
+          <ProjectCard
+            src={IMAGE.PROJECTS.servycing}
+            title='Confiança Delivery'
+            year='2018'
+            description='Supermarket online delivery store'
+            company='BizCommerce'
+          />
+        </CardContainer>
       </ProjectContainer>
     </Container>
   )

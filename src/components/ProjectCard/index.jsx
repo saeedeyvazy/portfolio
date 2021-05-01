@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 import styled from "styled-components"
 
-const Container = styled.div`
+const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,28 +25,57 @@ const BackFilter = styled.div`
   opacity: ${({ visible }) => (visible ? 0.8 : 0)};
 `
 const Test = styled.div`
-  width: 400px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
   margin: 6px 20px;
+  border-radius: 50%;
   &:hover .test {
     transform: scale(1.1);
   }
 `
 
-function ProjectCard({ src }) {
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const ProjectDesc = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: start;
+  strong {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  span {
+    font-size: 1rem;
+    color: #504e4e;
+  }
+`
+
+function ProjectCard({ src, title, year, company, description }) {
   const [toggle, setToggle] = useState(false)
   return (
-    <Test>
-      <Container
-        className='test'
-        src={src}
-        onMouseOver={() => setToggle(true)}
-        onMouseLeave={() => setToggle(false)}
-      >
-        <BackFilter visible={toggle} />
-      </Container>
-    </Test>
+    <Container>
+      <Test>
+        <ImageContainer
+          className='test'
+          src={src}
+          onMouseOver={() => setToggle(true)}
+          onMouseLeave={() => setToggle(false)}
+        >
+          <BackFilter visible={toggle} />
+        </ImageContainer>
+      </Test>
+      <ProjectDesc>
+        <strong>{title}</strong>
+        <span>{`//  ${year} - ${company}`}</span>
+        <h4>{description}</h4>
+      </ProjectDesc>
+    </Container>
   )
 }
 
