@@ -30,6 +30,8 @@ import Aos from "aos"
 import DescriptionSection from "../../components/DescriptionSection"
 import { deviceSize } from "../../constants/device.size"
 import Project from "./Project"
+import SectionTitle from "../../components/SectionTitle"
+import { color } from "../../constants/color"
 
 const TopSectionContainer = styled.div`
   height: 100vh;
@@ -43,7 +45,7 @@ const TopSectionContainer = styled.div`
 const BackFilter = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgb(16, 12, 12, 0.8);
+  background-color: rgb(16 12 12 / 36%);
   display: flex;
   flex-direction: column;
   align-items: space-around;
@@ -68,14 +70,14 @@ const Menu = styled.div`
 
   padding: 0 20px;
   h4 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    margin-left: 35px;
-    transition: all 200ms ease-in-out;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin-left: 15px;
+    transition: all 300ms ease-in-out;
     &:hover {
       cursor: pointer;
-      opacity: 0.8;
+      color: ${color.PRIMARY_COLOR};
     }
   }
 `
@@ -85,7 +87,7 @@ const SummarizaInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   text-align: start;
   h1 {
@@ -96,10 +98,9 @@ const SummarizaInfo = styled.div`
 `
 
 const SummSkillsContainer = styled.div`
-  font-size: 12px;
+  font-size: 16px;
   color: #fff;
   font-weight: 500;
-  letter-spacing: 3px;
 `
 
 const Button = styled.button`
@@ -189,11 +190,11 @@ const ProfileDesc = styled.div`
     justify-content: center;
     height: auto;
   }
-  h1 {
+  > h1 {
     font-weight: 700;
     font-size: 26px;
   }
-  p {
+  > p {
     font-size: 14px;
     font-weight: normal;
     line-height: 27px;
@@ -233,27 +234,34 @@ function HomePage() {
           <HeaderContainer>
             <Logo />
             <Menu>
-              <h4>Home</h4>
-              <h4>About</h4>
-              <h4>Projects</h4>
-              <h4>Skills</h4>
-              <h4>Tools</h4>
-              <h4>Contract</h4>
+              <h4>.is()</h4>
+              <h4>.skills()</h4>
+              <h4>.tools()</h4>
+              <h4>.work()</h4>
+              <h4>.contract()</h4>
             </Menu>
           </HeaderContainer>
           <SummarizaInfo>
             <Marginer direction='horizontal' margin={20} />
-            <h1>
-              Saeed
-              <br />
-              Eyvazy
-            </h1>
+            <div style={{ textAlign: "center", color: "white" }}>
+              <h3 style={{ margin: 0 }}>MY NAME IS</h3>
+              <h1
+                style={{
+                  borderBottom: "1px solid white",
+                  lineHeight: 1.8,
+                  margin: 0,
+                }}
+              >
+                Saeed Eyvazy
+              </h1>
+            </div>
+            <Marginer margin={10} direction='vertical' />
             <SummSkillsContainer>
               <ReactTypingEffect
                 typingDelay={300}
                 eraseSpeed={20}
-                eraseDelay={400}
-                speed={50}
+                eraseDelay={700}
+                speed={100}
                 text={[
                   "React Js Developer",
                   "Spring Boot Developer",
@@ -285,9 +293,8 @@ function HomePage() {
           </SocialMediaContainer>
         </ProfilePhoto>
         <ProfileDesc>
+          <SectionTitle func='is' />
           <h1>
-            Hello! I'm Saeed Eyvazy,
-            <br />
             A Full Stack Developer
             <br />
             From Tehran, Iran.
@@ -335,7 +342,7 @@ function HomePage() {
         </ProfileDesc>
       </IntroducePerson>
       <DescriptionSection
-        title='Skills'
+        title='skills'
         subtitle='Languages and Technologies that I have learned and applied to my
                     projects'
       >
@@ -364,7 +371,7 @@ function HomePage() {
         <SkillCard title='Bootstrap4' icon={faBootstrap} description='' />
       </DescriptionSection>
       <DescriptionSection
-        title='Tools'
+        title='tools'
         bgColor='white'
         subtitle='My weapons of choice to help tackle any project.'
       >

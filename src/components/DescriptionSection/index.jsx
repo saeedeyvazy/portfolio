@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { deviceSize } from "../../constants/device.size"
 import { Marginer } from "../Marginer"
+import SectionTitle from "../SectionTitle"
 
 const SkillsContainer = styled.div`
   min-height: 100vh;
@@ -39,8 +40,8 @@ const CardContainer = styled.div`
 function DescriptionSection({ title, subtitle, children, bgColor }) {
   return (
     <SkillsContainer bgColor={bgColor}>
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
+      <SectionTitle func={title} />
+      <p>{`//  ${subtitle}`}</p>
       <Marginer direction='vertical' margin={50} />
       <CardContainer data-aos='fade-in'>{children}</CardContainer>
     </SkillsContainer>

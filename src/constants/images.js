@@ -1,4 +1,4 @@
-import BG from "../assets/images/bg10.jpg"
+import BG from "../assets/images/bg3.jfif"
 import PROFILE from "../assets/images/photo.jpg"
 import DISNEY from "../assets/images/project1.PNG"
 import FOOD from "../assets/images/project2.jfif"

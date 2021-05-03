@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import DescriptionSection from "../../components/DescriptionSection"
 import ProjectCard from "../../components/ProjectCard"
+import SectionTitle from "../../components/SectionTitle"
 import { IMAGE } from "../../constants"
 import { deviceSize } from "../../constants/device.size"
 
@@ -87,11 +88,7 @@ const ProjectTitle = styled.div`
 function Project() {
   return (
     <Container>
-      <h3>Projects</h3>
-      <p>
-        From ideation to creation, here are some applications that I have
-        developed
-      </p>
+      <SectionTitle func='work' />
       <TabContainer>
         <Tab>
           <TabText>All</TabText>
@@ -108,7 +105,7 @@ function Project() {
       </TabContainer>
       <ProjectContainer>
         <ProjectTitle>
-          <h1>work.selected()</h1>
+          <h1>work.all()</h1>
         </ProjectTitle>
         <CardContainer data-aos='fade-in'>
           <ProjectCard
