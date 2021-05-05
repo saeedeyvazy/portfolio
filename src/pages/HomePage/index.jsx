@@ -98,9 +98,9 @@ const SummarizaInfo = styled.div`
 `
 
 const SummSkillsContainer = styled.div`
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 300;
 `
 
 const Button = styled.button`
