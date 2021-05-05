@@ -12,7 +12,9 @@ const Title = styled.h1`
   }
 `
 const Func = styled.span`
-  color: ${color.PRIMARY_COLOR};
+  background: ${color.PRIMARY_COLOR};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `
 const Saeed = styled.span`
   color: black;

@@ -117,6 +117,7 @@ const Button = styled.button`
   text-align: center;
   &:hover {
     background-color: ${COLOR.PRIMARY_COLOR};
+    background-image: linear-gradient(45deg, #06bc9b, #1ba49c);
   }
 `
 

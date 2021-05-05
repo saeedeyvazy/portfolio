@@ -67,10 +67,7 @@ const TabText = styled.h6`
 `
 const CardContainer = styled.div`
   display: flex;
-  flex: 3;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: space-around;
   flex-wrap: wrap;
 `
@@ -79,11 +76,6 @@ const ProjectContainer = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-`
-
-const ProjectTitle = styled.div`
-  flex: 1;
-  height: auto;
 `
 
 function Project() {
@@ -105,9 +97,6 @@ function Project() {
         </Tab>
       </TabContainer>
       <ProjectContainer>
-        <ProjectTitle>
-          <h1>work.all()</h1>
-        </ProjectTitle>
         <CardContainer data-aos='fade-in'>
           <ProjectCard
             src={IMAGE.PROJECTS.servycing}
