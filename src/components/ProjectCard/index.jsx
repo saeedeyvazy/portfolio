@@ -1,6 +1,7 @@
 import React from "react"
 import { useState } from "react"
 import styled from "styled-components"
+import { deviceSize } from "../../constants/device.size"
 
 const ImageContainer = styled.div`
   display: flex;
@@ -39,6 +40,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const ProjectDesc = styled.div`
@@ -53,6 +59,16 @@ const ProjectDesc = styled.div`
   span {
     font-size: 1rem;
     color: #504e4e;
+  }
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    text-align: center;
+    strong {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+    span {
+      font-size: 0.5rem;
+    }
   }
 `
 

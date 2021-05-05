@@ -37,8 +37,9 @@ const TabContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: fit-content;
+  /* width: fit-content; */
   flex: 0.1;
+  flex-wrap: wrap;
 `
 
 const Tab = styled.div`

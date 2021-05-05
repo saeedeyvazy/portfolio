@@ -1,10 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import { color } from "../../constants/color"
+import { deviceSize } from "../../constants/device.size"
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
+  @media screen and (max-width: ${deviceSize.mobile}px) {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
 `
 const Func = styled.span`
   color: ${color.PRIMARY_COLOR};
