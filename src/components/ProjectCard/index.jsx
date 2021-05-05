@@ -51,6 +51,7 @@ const Container = styled.div`
   @media screen and (max-width: ${deviceSize.mobile}px) {
     flex-direction: column;
     align-items: center;
+    margin: 6px;
   }
   @media screen and (max-width: ${deviceSize.small}px) {
     width: 90%;
