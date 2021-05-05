@@ -111,31 +111,31 @@ function Project() {
         <CardContainer data-aos='fade-in'>
           <ProjectCard
             src={IMAGE.PROJECTS.servycing}
-            title='Confiança Delivery'
+            title='Servycing'
             year='2018'
-            description='Supermarket online delivery store'
+            description='Online Servycing For Homes'
             company='BizCommerce'
-          />
-          <ProjectCard
-            src={IMAGE.PROJECTS.disney}
-            title='Disney'
-            year='2017'
-            description='online Movies store'
-            company='Online Movies'
           />
           <ProjectCard
             src={IMAGE.PROJECTS.food}
-            title='Food Delivery'
-            year='2019'
-            description='Food Delivey App'
-            company='Online Food'
+            title='Chef Koochooloo'
+            year='2021'
+            description='Mobile App For Cooking & Learning English'
+            company='Chef Koochooloo'
           />
           <ProjectCard
-            src={IMAGE.PROJECTS.servycing}
-            title='Confiança Delivery'
-            year='2018'
-            description='Supermarket online delivery store'
-            company='BizCommerce'
+            src={IMAGE.PROJECTS.otp}
+            title='OTP'
+            year='2019'
+            description='One Time Password Mobile App For Bank'
+            company='Iraninan Ghavamin Bank'
+          />
+          <ProjectCard
+            src={IMAGE.PROJECTS.pishkhan}
+            title='Bank Assistant'
+            year='2019'
+            description='online Iranina Bank Assitant'
+            company='Resalat Iranina Bank'
           />
         </CardContainer>
       </ProjectContainer>

@@ -53,17 +53,17 @@ const ProjectDesc = styled.div`
   flex: 1;
   text-align: start;
   strong {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
   }
   span {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #504e4e;
   }
   @media screen and (max-width: ${deviceSize.mobile}px) {
     text-align: center;
     strong {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 400;
     }
     span {
