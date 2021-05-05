@@ -13,7 +13,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  min-height: 100vh;
   background-color: ${({ bgColor }) => (bgColor ? bgColor : "#f5f6f7")};
   > h3 {
     font-size: 2.25rem;
@@ -33,38 +32,6 @@ const Container = styled.div`
   }
 `
 
-const TabContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* width: fit-content; */
-  flex: 0.1;
-  flex-wrap: wrap;
-`
-
-const Tab = styled.div`
-  cursor: pointer;
-  margin: 0 30px;
-  text-align: center;
-  padding: 0 20px;
-  height: fit-content;
-  border-bottom: solid 0px #019fb6;
-  transition: all 250ms ease-in-out;
-
-  &:hover {
-    border-bottom: solid 1px #019fb6;
-    transform-origin: 0% 100%;
-  }
-  &:focus {
-    border-bottom: solid 1px #019fb6;
-    transform-origin: 0% 100%;
-  }
-`
-const TabText = styled.h6`
-  color: black;
-  font-size: 13px;
-  text-transform: uppercase;
-`
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -82,20 +49,6 @@ function Project() {
   return (
     <Container>
       <SectionTitle func='work' />
-      <TabContainer>
-        <Tab>
-          <TabText>All</TabText>
-        </Tab>
-        <Tab>
-          <TabText>ReactJs</TabText>
-        </Tab>
-        <Tab>
-          <TabText>React Native</TabText>
-        </Tab>
-        <Tab>
-          <TabText>Rest Api</TabText>
-        </Tab>
-      </TabContainer>
       <ProjectContainer>
         <CardContainer data-aos='fade-in'>
           <ProjectCard

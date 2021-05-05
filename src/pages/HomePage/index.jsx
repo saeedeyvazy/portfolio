@@ -31,6 +31,7 @@ import DescriptionSection from "../../components/DescriptionSection"
 import { deviceSize } from "../../constants/device.size"
 import Project from "./Project"
 import SectionTitle from "../../components/SectionTitle"
+import Button from "../../components/Button"
 import { color } from "../../constants/color"
 
 const TopSectionContainer = styled.div`
@@ -101,24 +102,6 @@ const SummSkillsContainer = styled.div`
   font-size: 18px;
   color: #fff;
   font-weight: 300;
-`
-
-const Button = styled.button`
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 15px 35px;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: 500;
-  transition: all 200ms ease-in-out;
-  text-transform: uppercase;
-  width: 150px;
-  text-align: center;
-  &:hover {
-    background-color: ${COLOR.PRIMARY_COLOR};
-    background-image: linear-gradient(45deg, #06bc9b, #1ba49c);
-  }
 `
 
 const Container = styled.div`

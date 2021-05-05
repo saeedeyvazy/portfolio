@@ -1,7 +1,9 @@
 import React from "react"
 import { useState } from "react"
 import styled from "styled-components"
+import { color } from "../../constants/color"
 import { deviceSize } from "../../constants/device.size"
+import Button from "../Button"
 
 const ImageContainer = styled.div`
   display: flex;
@@ -19,21 +21,19 @@ const ImageContainer = styled.div`
 const BackFilter = styled.div`
   width: 100%;
   height: 100%;
-  background-color: black;
-  transition: all 300ms ease-in-out;
-  z-index: 1;
+  background-color: #3c444b;
+  transition: all 700ms ease-in-out;
   opacity: 0;
-  opacity: ${({ visible }) => (visible ? 0.8 : 0)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  opacity: ${({ visible }) => (visible ? 1 : 0)};
 `
 const Test = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  margin: 6px 20px;
-  border-radius: 50%;
-  &:hover .test {
-    transform: scale(1.1);
-  }
 `
 
 const Container = styled.div`
@@ -41,24 +41,43 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  height: 250px;
+  margin: 6px 20px;
+  background-color: #cacaca;
   @media screen and (max-width: ${deviceSize.mobile}px) {
     flex-direction: column;
     align-items: center;
+  }
+  @media screen and (max-width: ${deviceSize.small}px) {
+    width: 90%;
   }
 `
 
 const ProjectDesc = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
-  text-align: start;
+  align-items: center;
+  justify-content: center;
+  background: ${color.PRIMARY_COLOR};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   strong {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
   }
   span {
     font-size: 0.75rem;
     color: #504e4e;
+  }
+  h4 {
+    font-size: 0.75rem;
+    background: rgba(82, 93, 104, 0.7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   @media screen and (max-width: ${deviceSize.mobile}px) {
     text-align: center;
@@ -83,14 +102,15 @@ function ProjectCard({ src, title, year, company, description }) {
           onMouseOver={() => setToggle(true)}
           onMouseLeave={() => setToggle(false)}
         >
-          <BackFilter visible={toggle} />
+          <BackFilter visible={toggle}>
+            <ProjectDesc>
+              <strong>{title}</strong>
+              <h4>{description}</h4>
+            </ProjectDesc>
+            <Button bg='#06bc9b'>View Project</Button>
+          </BackFilter>
         </ImageContainer>
       </Test>
-      <ProjectDesc>
-        <strong>{title}</strong>
-        <span>{`//  ${year} - ${company}`}</span>
-        <h4>{description}</h4>
-      </ProjectDesc>
     </Container>
   )
 }
