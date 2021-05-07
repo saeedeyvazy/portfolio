@@ -51,6 +51,13 @@ function Project() {
 			<ProjectContainer>
 				<CardContainer data-aos='fade-in'>
 					<ProjectCard
+						src={IMAGE.PROJECTS.disney}
+						title='Disney Plus'
+						year='2021'
+						description='Online Movies'
+						company='Own'
+					/>
+					<ProjectCard
 						src={IMAGE.PROJECTS.servycing}
 						title='Servycing'
 						year='2018'
