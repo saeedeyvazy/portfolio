@@ -5,6 +5,7 @@ import FOOD from '../assets/images/project3_auto_x2.jpg'
 import OTP from '../assets/images/project4_auto_x2.jpg'
 import TREND from '../assets/images/world-trend.png'
 import DISNEY from '../assets/images/project5.png'
+import ISG from '../assets/images/isgengeenr.png'
 
 const PROJECTS = {
 	servycing:
@@ -14,5 +15,6 @@ const PROJECTS = {
 	otp: OTP,
 	trend: TREND,
 	disney: DISNEY,
+	isg: ISG,
 }
 export const image = { BG, PROFILE, PROJECTS }

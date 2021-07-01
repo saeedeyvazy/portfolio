@@ -72,6 +72,13 @@ function Project() {
 						company='Chef Koochooloo'
 					/>
 					<ProjectCard
+						src={IMAGE.PROJECTS.isg}
+						title='Building Site'
+						year='2021'
+						description='Our Site Has Interaction For Buildings'
+						company='Own'
+					/>
+					<ProjectCard
 						src={IMAGE.PROJECTS.trend}
 						title='World Trends'
 						year='2021'
