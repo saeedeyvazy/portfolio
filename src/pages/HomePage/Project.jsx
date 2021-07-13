@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import DescriptionSection from "../../components/DescriptionSection"
-import ProjectCard from "../../components/ProjectCard"
-import SectionTitle from "../../components/SectionTitle"
-import { IMAGE } from "../../constants"
-import { deviceSize } from "../../constants/device.size"
+import React from 'react'
+import styled from 'styled-components'
+import DescriptionSection from '../../components/DescriptionSection'
+import ProjectCard from '../../components/ProjectCard'
+import SectionTitle from '../../components/SectionTitle'
+import { IMAGE } from '../../constants'
+import { deviceSize } from '../../constants/device.size'
 
 const Container = styled.div`
   min-height: 100vh;
@@ -13,7 +13,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  background-color: ${({ bgColor }) => (bgColor ? bgColor : "#f5f6f7")};
+  background-color: ${({ bgColor }) => (bgColor ? bgColor : '#f5f6f7')};
   > h3 {
     font-size: 2.25rem;
     font-weight: 400;
@@ -78,6 +78,13 @@ function Project() {
             year='2019'
             description='online Iranina Bank Assitant'
             company='Resalat Iranina Bank'
+          />
+          <ProjectCard
+            src={IMAGE.PROJECTS.nevisa}
+            title='Nevisa'
+            year='2021'
+            description='Online TTS Service'
+            company='Asre Gooyesh Pardaz'
           />
         </CardContainer>
       </ProjectContainer>
