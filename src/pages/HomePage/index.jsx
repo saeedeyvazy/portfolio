@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { IMAGE, COLOR } from "../../constants"
-import { Marginer } from "../../components/Marginer"
-import ReactTypingEffect from "react-typing-effect"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react'
+import styled from 'styled-components'
+import { IMAGE, COLOR } from '../../constants'
+import { Marginer } from '../../components/Marginer'
+import ReactTypingEffect from 'react-typing-effect'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBootstrap,
   faCss3,
@@ -21,18 +21,18 @@ import {
   faTrello,
   faTwitter,
   faUbuntu,
-} from "@fortawesome/free-brands-svg-icons"
-import SkillCard from "../../components/SkillCard"
-import { faDatabase, faTerminal } from "@fortawesome/free-solid-svg-icons"
-import "aos/dist/aos.css"
-import { useEffect } from "react"
-import Aos from "aos"
-import DescriptionSection from "../../components/DescriptionSection"
-import { deviceSize } from "../../constants/device.size"
-import Project from "./Project"
-import SectionTitle from "../../components/SectionTitle"
-import Button from "../../components/Button"
-import { color } from "../../constants/color"
+} from '@fortawesome/free-brands-svg-icons'
+import SkillCard from '../../components/SkillCard'
+import { faDatabase, faTerminal } from '@fortawesome/free-solid-svg-icons'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+import Aos from 'aos'
+import DescriptionSection from '../../components/DescriptionSection'
+import { deviceSize } from '../../constants/device.size'
+import Project from './Project'
+import SectionTitle from '../../components/SectionTitle'
+import Button from '../../components/Button'
+import { color } from '../../constants/color'
 
 const TopSectionContainer = styled.div`
   height: 100vh;
@@ -227,11 +227,11 @@ function HomePage() {
           </HeaderContainer>
           <SummarizaInfo>
             <Marginer direction='horizontal' margin={20} />
-            <div style={{ textAlign: "center", color: "white" }}>
+            <div style={{ textAlign: 'center', color: 'white' }}>
               <h3 style={{ margin: 0 }}>MY NAME IS</h3>
               <h1
                 style={{
-                  borderBottom: "1px solid white",
+                  borderBottom: '1px solid white',
                   lineHeight: 1.8,
                   margin: 0,
                 }}
@@ -247,11 +247,11 @@ function HomePage() {
                 eraseDelay={700}
                 speed={100}
                 text={[
-                  "React Js Developer",
-                  "Spring Boot Developer",
-                  "Software Engineer",
-                  "Coder",
-                  "Bug Squasher",
+                  'React Js Developer',
+                  'Spring Boot Developer',
+                  'Software Engineer',
+                  'Coder',
+                  'Bug Squasher',
                 ]}
               />
             </SummSkillsContainer>
@@ -312,8 +312,8 @@ function HomePage() {
           <h6>
             <span
               style={{
-                color: "rgb(26, 98, 202)",
-                fontSize: "14px",
+                color: 'rgb(26, 98, 202)',
+                fontSize: '14px',
                 fontWeight: 400,
               }}
             >

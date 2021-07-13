@@ -3,13 +3,20 @@ import PROFILE from '../assets/images/profile2.jpg'
 import PISHKHAN from '../assets/images/project1.PNG'
 import FOOD from '../assets/images/project3_auto_x2.jpg'
 import OTP from '../assets/images/project4_auto_x2.jpg'
+import TREND from '../assets/images/world-trend.png'
+import DISNEY from '../assets/images/project5.png'
+import ISG from '../assets/images/isgengeenr.png'
 import NEVISA from '../assets/images/nevisa.PNG'
+
 const PROJECTS = {
   servycing:
     'https://d33wubrfki0l68.cloudfront.net/60868b050c5fc10008b00144/screenshot_2021-04-26-09-43-00-0000.png',
   pishkhan: PISHKHAN,
   food: FOOD,
   otp: OTP,
+  trend: TREND,
+  disney: DISNEY,
+  isg: ISG,
   nevisa: NEVISA,
 }
 export const image = { BG, PROFILE, PROJECTS }

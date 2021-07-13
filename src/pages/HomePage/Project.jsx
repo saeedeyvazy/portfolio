@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import DescriptionSection from '../../components/DescriptionSection'
 import ProjectCard from '../../components/ProjectCard'
 import SectionTitle from '../../components/SectionTitle'
 import { IMAGE } from '../../constants'
@@ -52,6 +51,13 @@ function Project() {
       <ProjectContainer>
         <CardContainer data-aos='fade-in'>
           <ProjectCard
+            src={IMAGE.PROJECTS.disney}
+            title='Disney Plus'
+            year='2021'
+            description='Online Movies'
+            company='Own'
+          />
+          <ProjectCard
             src={IMAGE.PROJECTS.servycing}
             title='Servycing'
             year='2018'
@@ -64,6 +70,21 @@ function Project() {
             year='2021'
             description='Mobile App For Cooking & Learning English'
             company='Chef Koochooloo'
+          />
+          <ProjectCard
+            src={IMAGE.PROJECTS.nevisa}
+            title='Nevisa'
+            year='2021'
+            description='Online Persian Speech To Text'
+            company='Asre Gooyesh Pardaz'
+          />
+
+          <ProjectCard
+            src={IMAGE.PROJECTS.trend}
+            title='World Trends'
+            year='2021'
+            description='Showing Twitter Trending Topics & Tweets'
+            company='Own'
           />
           <ProjectCard
             src={IMAGE.PROJECTS.otp}
@@ -80,11 +101,11 @@ function Project() {
             company='Resalat Iranina Bank'
           />
           <ProjectCard
-            src={IMAGE.PROJECTS.nevisa}
-            title='Nevisa'
+            src={IMAGE.PROJECTS.isg}
+            title='Building Site'
             year='2021'
-            description='Online TTS Service'
-            company='Asre Gooyesh Pardaz'
+            description='Our Site Has Interaction For Buildings'
+            company='Own'
           />
         </CardContainer>
       </ProjectContainer>
